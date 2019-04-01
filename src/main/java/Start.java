@@ -1,3 +1,4 @@
+import SK.FileLoader;
 import SK.FileSaver;
 import SK.Seller;
 import javafx.application.Application;
@@ -30,6 +31,16 @@ public class Start extends Application {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+        try {
+            if(FileLoader.UserExists("admin", "admin")) {
+                System.out.println("user exist");
+            }
+            else
+                System.out.println("user not exist");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         launch(args);
     }
 }

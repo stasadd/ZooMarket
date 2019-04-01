@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class XMLFormController {
@@ -24,6 +26,10 @@ public class XMLFormController {
     private JFXTextField passworText;
 
     public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+    public void btnLogin(ActionEvent actionEvent) {
 
     }
 
