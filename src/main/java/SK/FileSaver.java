@@ -24,9 +24,17 @@ public abstract class FileSaver {
         }
     }
 
-    public static void saveCheck(Seller seller, Animal animal){
+    public static void saveCheck(Seller seller, Animal animal) throws IOException {
         checkDirExists("Bills");
         String filePath = "Bills\\" + new SimpleDateFormat("dd.MM.yy_HH.mm.ss").format(Calendar.getInstance().getTime())+".txt";
+        String check = String.format("Продавець: %s\nТовар: %s\t%fгрн.\nОпис: %s\nДата: %tD %tT", seller.getLogin(), animal.getName(), animal.getPrice(), animal.getDescription(), Calendar.getInstance().getTime(), Calendar.getInstance().getTime());
+        byte [] inputBytes = check.getBytes();
+        ByteBuffer buffer = ByteBuffer.wrap(inputBytes);
+        FileOutputStream fos = new FileOutputStream(filePath);
+        FileChannel fileChannel = fos.getChannel();
+        fileChannel.write(buffer);
+        fileChannel.close();
+        fos.close();
     }
 
     private static void checkDirExists(String dirName){
