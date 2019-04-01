@@ -8,13 +8,13 @@ public class Start extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/PanelSnouFXML.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/loginFXML.fxml"));
         Scene scene = new Scene(root);
 
         primaryStage.setScene(scene);
         primaryStage.setWidth(600);
-        primaryStage.setHeight(500);
-        primaryStage.setTitle("Hello World");
+        primaryStage.setHeight(400);
+        primaryStage.setTitle("Login Seller");
         primaryStage.show();
     }
 
