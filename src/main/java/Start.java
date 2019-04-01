@@ -13,7 +13,7 @@ public class Start extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setWidth(600);
-        primaryStage.setHeight(400);
+        primaryStage.setHeight(500);
         primaryStage.setTitle("Login Seller");
         primaryStage.show();
     }
