@@ -26,7 +26,7 @@ public abstract class FileLoader {
                 noOfBytesRead = fileChannel.read(buffer);
             }
             fileChannel.close();
-            if(pass == password)
+            if(pass.equals(password))
                 return true;
         }
         return false;
