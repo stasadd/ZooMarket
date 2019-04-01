@@ -15,7 +15,6 @@ public class Start extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/loginFXML.fxml"));
         Scene scene = new Scene(root);
-
         primaryStage.setScene(scene);
         primaryStage.setWidth(600);
         primaryStage.setHeight(500);
@@ -31,15 +30,7 @@ public class Start extends Application {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-        try {
-            if(FileLoader.UserExists("admin", "admin")) {
-                System.out.println("user exist");
-            }
-            else
-                System.out.println("user not exist");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
         launch(args);
     }

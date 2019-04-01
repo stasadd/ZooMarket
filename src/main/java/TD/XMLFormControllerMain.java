@@ -1,11 +1,20 @@
 package TD;
 
 import com.jfoenix.controls.JFXButton;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class XMLFormControllerMain {
 
@@ -74,6 +83,20 @@ public class XMLFormControllerMain {
 
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    public void menuAddSellerShow(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/AddSellerFXML.fxml"));
+        Scene scene = new Scene(root);
+        Stage secondStage = new Stage();
+        Stage mainStage = (Stage) ButtonBuy1.getScene().getWindow();
+        secondStage.setScene(scene);
+        secondStage.initOwner(mainStage);
+        secondStage.initModality(Modality.WINDOW_MODAL);
+        secondStage.setWidth(750);
+        secondStage.setHeight(500);
+        secondStage.setTitle("Add Seller");
+        secondStage.show();
     }
 
 }
