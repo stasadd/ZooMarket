@@ -1,6 +1,7 @@
 package TD;
 
 import SK.FileLoader;
+import SK.Seller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
@@ -42,6 +43,9 @@ public class XMLFormController {
 
         try {
             if(FileLoader.UserExists(login, pass)) {
+
+                XMLFormControllerMain.currentSeller = new Seller(login, pass);
+
                 Parent root = FXMLLoader.load(getClass().getResource("/MainWindowFXML.fxml"));
                 Scene scene = new Scene(root);
                 Stage secondStage = (Stage) buttonLogin.getScene().getWindow();

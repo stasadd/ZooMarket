@@ -1,5 +1,7 @@
 package TD;
 
+import SK.FileSaver;
+import SK.Seller;
 import com.jfoenix.controls.JFXButton;
 
 import java.io.IOException;
@@ -20,6 +22,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class XMLFormControllerMain {
+
+    public static Seller currentSeller = new Seller();
 
     @FXML
     private ResourceBundle resources;
@@ -118,26 +122,66 @@ public class XMLFormControllerMain {
 
     public void btnBuyAnimal(ActionEvent actionEvent) {
         Button temp = (Button)actionEvent.getSource();
-
+        String animalName = "";
+        Animal newAnimal = getRandomAnimal();
         switch (temp.getId()) {
             case "ButtonBuy1": {
+                animalName = TextName1.getText();
+                TextName1.setText(newAnimal.getName());
+                textPrice1.setText(newAnimal.getPrice().toString());
                 break;
             }
             case "ButtonBuy2": {
+                animalName = TextName2.getText();
+                TextName2.setText(newAnimal.getName());
+                textPrice2.setText(newAnimal.getPrice().toString());
                 break;
             }
             case "ButtonBuy3": {
+                animalName = TextName3.getText();
+                TextName3.setText(newAnimal.getName());
+                textPrice3.setText(newAnimal.getPrice().toString());
                 break;
             }
             case "ButtonBuy4": {
+                animalName = TextName4.getText();
+                TextName4.setText(newAnimal.getName());
+                textPrice4.setText(newAnimal.getPrice().toString());
                 break;
             }
             case "ButtonBuy5": {
+                animalName = TextName5.getText();
+                TextName5.setText(newAnimal.getName());
+                textPrice5.setText(newAnimal.getPrice().toString());
                 break;
             }
             case "ButtonBuy6": {
+                animalName = TextName6.getText();
+                TextName6.setText(newAnimal.getName());
+                textPrice6.setText(newAnimal.getPrice().toString());
                 break;
             }
+        }
+        try {
+            FileSaver.saveCheck(currentSeller, findAnimalByName(animalName));
+
+            XMLFormControllerCheck.animal = findAnimalByName(animalName);
+            XMLFormControllerCheck.seller = currentSeller;
+
+            Parent root = FXMLLoader.load(getClass().getResource("/checkFXML.fxml"));
+            Scene scene = new Scene(root);
+            Stage secondStage = new Stage();
+            Stage mainStage = (Stage) ButtonBuy1.getScene().getWindow();
+            secondStage.setScene(scene);
+            secondStage.initOwner(mainStage);
+            secondStage.initModality(Modality.WINDOW_MODAL);
+            secondStage.setWidth(600);
+            secondStage.setHeight(500);
+            secondStage.setTitle("Check");
+            secondStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -154,5 +198,17 @@ public class XMLFormControllerMain {
         textPrice5.setText(perfectAnimals.get(4).getPrice().toString());
         TextName6.setText(perfectAnimals.get(5).getName());
         textPrice6.setText(perfectAnimals.get(5).getPrice().toString());
+    }
+
+    private Animal findAnimalByName(String name) {
+        for (Animal a : perfectAnimals) {
+            if(a.getName().equals(name))
+                return a;
+        }
+        return null;
+    }
+
+    private Animal getRandomAnimal() {
+        return perfectAnimals.get((int)Math.random()*6);
     }
 }
