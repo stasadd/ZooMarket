@@ -3,6 +3,7 @@ package SK;
 public class Animal {
     private String name;
     private double price;
+    private String description;
 
     public Animal() {}
 
