@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 
 public class XMLFormControllerMain {
 
+    //ми знаєм, що то не файно, але ми виживали як могли
     public static Seller currentSeller = new Seller();
 
     @FXML

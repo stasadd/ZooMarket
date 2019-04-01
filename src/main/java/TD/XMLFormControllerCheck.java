@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 
 public class XMLFormControllerCheck {
 
+    //ми знаєм, що то не файно, але ми виживали як могли
     public static Animal animal = new Animal();
     public static Seller seller = new Seller();
 
