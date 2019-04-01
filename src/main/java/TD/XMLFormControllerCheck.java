@@ -25,6 +25,9 @@ public class XMLFormControllerCheck {
     @FXML
     private Label Date;
 
+    @FXML
+    private Label Deskription;
+
     public void initialize(URL location, ResourceBundle resources) {
 
     }

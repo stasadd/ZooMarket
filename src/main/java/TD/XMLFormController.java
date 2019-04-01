@@ -50,7 +50,7 @@ public class XMLFormController {
                 secondStage.setScene(scene);
                 secondStage.setWidth(750);
                 secondStage.setHeight(500);
-                secondStage.setTitle("Login Seller");
+                secondStage.setTitle("Main Window");
                 secondStage.show();
                 System.out.println("user exist");
             }

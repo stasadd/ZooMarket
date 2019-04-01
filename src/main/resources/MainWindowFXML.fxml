@@ -34,10 +34,10 @@
          <center>
             <Pane prefHeight="329.0" prefWidth="348.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="92.0" text="Назва тваринки" />
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="120.0" text="Назва тваринки" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="14.0" prefHeight="27.0" prefWidth="78.0" text="Ціна" textAlignment="CENTER" />
-                  <Label fx:id="TextName1" alignment="CENTER" layoutX="14.0" layoutY="47.0" prefHeight="27.0" prefWidth="92.0" text="Назва тваринки" />
-                  <Label fx:id="textPrice1" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="47.0" prefHeight="27.0" prefWidth="78.0" text="Ціна" textAlignment="CENTER" />
+                  <Label fx:id="TextName1" alignment="CENTER" layoutX="14.0" layoutY="47.0" prefHeight="27.0" prefWidth="92.0" />
+                  <Label fx:id="textPrice1" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="47.0" prefHeight="27.0" prefWidth="78.0" textAlignment="CENTER" />
                   <Label fx:id="TextName2" alignment="CENTER" layoutX="14.0" layoutY="81.0" prefHeight="27.0" prefWidth="92.0" text="Назва тваринки" />
                   <Label fx:id="textPrice2" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="81.0" prefHeight="27.0" prefWidth="78.0" text="Ціна" textAlignment="CENTER" />
                   <Label fx:id="TextName3" alignment="CENTER" layoutX="14.0" layoutY="113.0" prefHeight="27.0" prefWidth="92.0" text="Назва тваринки" />
@@ -48,12 +48,12 @@
                   <Label fx:id="TextName6" alignment="CENTER" layoutX="15.0" layoutY="210.0" prefHeight="27.0" prefWidth="92.0" text="Назва тваринки" />
                   <Label fx:id="textPrice6" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="210.0" prefHeight="27.0" prefWidth="78.0" text="Ціна" textAlignment="CENTER" />
                   <Label fx:id="TextName5" alignment="CENTER" layoutX="14.0" layoutY="179.0" prefHeight="27.0" prefWidth="92.0" text="Назва тваринки" />
-                  <JFXButton fx:id="ButtonBuy1" layoutX="215.0" layoutY="48.0" text="Купити" />
-                  <JFXButton fx:id="ButtonBuy2" layoutX="215.0" layoutY="82.0" text="Купити" />
-                  <JFXButton fx:id="ButtonBuy3" layoutX="215.0" layoutY="114.0" text="Купити" />
-                  <JFXButton fx:id="ButtonBuy4" layoutX="215.0" layoutY="147.0" text="Купити" />
-                  <JFXButton fx:id="ButtonBuy5" layoutX="215.0" layoutY="181.0" text="Купити" />
-                  <JFXButton fx:id="ButtonBuy6" layoutX="215.0" layoutY="211.0" text="Купити" />
+                  <JFXButton fx:id="ButtonBuy1" onAction="#btnBuyAnimal" layoutX="215.0" layoutY="48.0" text="Купити" />
+                  <JFXButton fx:id="ButtonBuy2" onAction="#btnBuyAnimal" layoutX="215.0" layoutY="82.0" text="Купити" />
+                  <JFXButton fx:id="ButtonBuy3" onAction="#btnBuyAnimal" layoutX="215.0" layoutY="114.0" text="Купити" />
+                  <JFXButton fx:id="ButtonBuy4" onAction="#btnBuyAnimal" layoutX="215.0" layoutY="147.0" text="Купити" />
+                  <JFXButton fx:id="ButtonBuy5" onAction="#btnBuyAnimal" layoutX="215.0" layoutY="181.0" text="Купити" />
+                  <JFXButton fx:id="ButtonBuy6" onAction="#btnBuyAnimal" layoutX="215.0" layoutY="211.0" text="Купити" />
                </children>
             </Pane>
          </center>
