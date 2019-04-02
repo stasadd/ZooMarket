@@ -176,8 +176,8 @@ public class XMLFormControllerMain {
             secondStage.setScene(scene);
             secondStage.initOwner(mainStage);
             secondStage.initModality(Modality.WINDOW_MODAL);
-            secondStage.setWidth(600);
-            secondStage.setHeight(500);
+            secondStage.setWidth(400);
+            secondStage.setHeight(300);
             secondStage.setTitle("Check");
             secondStage.show();
 
@@ -210,6 +210,8 @@ public class XMLFormControllerMain {
     }
 
     private Animal getRandomAnimal() {
-        return perfectAnimals.get((int)Math.random()*6);
+        int r = (int)(Math.random() * 6);
+        System.out.println(r);
+        return perfectAnimals.get(r);
     }
 }
