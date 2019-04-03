@@ -176,7 +176,7 @@ public class XMLFormControllerMain {
             secondStage.setScene(scene);
             secondStage.initOwner(mainStage);
             secondStage.initModality(Modality.WINDOW_MODAL);
-            secondStage.setWidth(400);
+            secondStage.setWidth(500);
             secondStage.setHeight(300);
             secondStage.setTitle("Check");
             secondStage.show();
